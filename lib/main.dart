@@ -1,9 +1,19 @@
 import 'package:demo/counter.dart';
 import 'package:demo/input_example.dart';
+import 'package:demo/models/countermodel.dart';
+import 'package:demo/providerExample.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: ((context) => MainModel())),
+      ],
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -18,7 +28,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: InputClass(),
+      home: ProviderPage(
+        title: 'Provider Page',
+      ),
       //home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }

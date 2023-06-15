@@ -16,16 +16,13 @@ class InputClass extends StatelessWidget {
           padding: EdgeInsets.all(16.0),
           child: Column(
             children: <Widget>[
-              CustomText(
-                ctrl: _nameController,
-                label: 'Name',
+              CustomText(ctrl: _nameController, label: 'Example'),
+              TextField(
+                controller: _nameController,
+                decoration: InputDecoration(
+                  labelText: 'Name',
+                ),
               ),
-              // TextField(
-              //   controller: _nameController,
-              //   decoration: InputDecoration(
-              //     labelText: 'Name',
-              //   ),
-              // ),
               SizedBox(height: 16.0),
               TextField(
                 controller: _emailController,
