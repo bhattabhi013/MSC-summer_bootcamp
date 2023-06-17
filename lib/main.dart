@@ -1,4 +1,5 @@
 import 'package:demo/counter.dart';
+import 'package:demo/httpcall.dart';
 import 'package:demo/input_example.dart';
 import 'package:demo/models/countermodel.dart';
 import 'package:demo/providerExample.dart';
@@ -28,9 +29,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: ProviderPage(
-        title: 'Provider Page',
-      ),
+      home: HttpCall(),
+      // home: ProviderPage(
+      //   title: 'Provider Page',
+      // ),
       //home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
