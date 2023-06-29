@@ -13,11 +13,14 @@ class ViewDetails extends StatelessWidget {
         SizedBox(
           height: 100,
         ),
-        ListTile(
-          title: Text(user['name']['first']),
-          subtitle: Text(user['email']),
-          leading: ClipRect(
-            child: Image.network(user['picture']['thumbnail']),
+        Hero(
+          tag: 'details',
+          child: ListTile(
+            title: Text(user['name']['first']),
+            subtitle: Text(user['email']),
+            leading: ClipRect(
+              child: Image.network(user['picture']['thumbnail']),
+            ),
           ),
         ),
       ]),

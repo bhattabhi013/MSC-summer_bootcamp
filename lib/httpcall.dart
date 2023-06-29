@@ -65,20 +65,23 @@ class _HttpCallState extends State<HttpCall> {
                 child: ListView.builder(
                     itemCount: dataList.length,
                     itemBuilder: (BuildContext context, int index) {
-                      return ListTile(
-                        title: Text(dataList[index]['name']['first']),
-                        subtitle: Text(dataList[index]['email']),
-                        leading: ElevatedButton(
-                            onPressed: () {
-                              Navigator.of(context).push(
-                                MaterialPageRoute(
-                                  builder: (context) => ViewDetails(
-                                    user: dataList[index],
+                      return Hero(
+                        tag: 'details',
+                        child: ListTile(
+                          title: Text(dataList[index]['name']['first']),
+                          subtitle: Text(dataList[index]['email']),
+                          leading: ElevatedButton(
+                              onPressed: () {
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (context) => ViewDetails(
+                                      user: dataList[index],
+                                    ),
                                   ),
-                                ),
-                              );
-                            },
-                            child: Text('View Details')),
+                                );
+                              },
+                              child: Text('View Details')),
+                        ),
                       );
                     })),
           ],

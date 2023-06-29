@@ -1,8 +1,17 @@
+import 'package:demo/animationExamples/animatedCont.dart';
+import 'package:demo/animationExamples/curveexample.dart';
+import 'package:demo/animationExamples/hero_screen1.dart';
+import 'package:demo/animationExamples/listexample.dart';
+import 'package:demo/animationExamples/tweenBuilderExample.dart';
+import 'package:demo/animationExamples/tweenanimation.dart';
 import 'package:demo/counter.dart';
+import 'package:demo/geolocation.dart';
 import 'package:demo/httpcall.dart';
 import 'package:demo/input_example.dart';
 import 'package:demo/models/countermodel.dart';
 import 'package:demo/providerExample.dart';
+import 'package:demo/webview.dart';
+import 'package:demo/youtubeview.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
